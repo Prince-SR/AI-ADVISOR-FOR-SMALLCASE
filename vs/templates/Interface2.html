@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="../static/style2.css">
+<div class="container">
+    <h1>Small Cases</h1>
+    <div class="items" id="it">
+  
+      <h2 class="done" aria-hidden="true">RECOMMENDED</h2>
+      
+    </div>
+    <form action="/">
+      <div class="btn-block">
+        <button type="submit" >Thank You!</button>
+      </div>
+    </form>
+   
+
+    {% if arr %}
+      <script>
+        function items(data) {
+          var len = Object.keys( data["Risk"] ).length;
+
+          var it = document.getElementById("it");
+          for(let i = 0; i < len ; i++) {
+              it.innerHTML += `
+              <input id="item${i+1}" type="checkbox">
+              <label for="item${i+1}">${data["SMALLCASES NAME"][i]} <br>
+              CAGR TENURE: ${data["CAGR TENURE"][i]} <br>
+              CAGR %: ${data["CAGR %"][i]} <br>
+              MIN VALUE OF INVESTMENT: ${data["MIN VALUE OF INVESTMENT"][i]} </label>
+              `;
+          }
+        }
+
+        items({{arr | safe}});
+
+      </script>
+    {% endif %}
+
+  </div>

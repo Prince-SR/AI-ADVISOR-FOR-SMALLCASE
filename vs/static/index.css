@@ -1,0 +1,215 @@
+html, body {
+    margin: 20px;
+    color: #435757;
+    background: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
+    font: 500 1.2em/1.2 'Roboto', sans-serif;
+min-height: 100%;
+}
+body, div, form, input, select, textarea, p { 
+padding: 0;
+margin: 0;
+outline: none;
+font-family: Roboto, Arial, sans-serif;
+font-size: 14px;
+color: #666;
+line-height: 22px;
+}
+h1 {
+position: absolute;
+margin: 0;
+font-size: 36px;
+color: #fff;
+z-index: 2;
+}
+.testbox {
+display: flex;
+justify-content: center;
+align-items: center;
+height: inherit;
+padding: 20px;
+}
+form {
+width: 100%;
+padding: 20px;
+border-radius: 6px;
+background: #fff;
+box-shadow: 0 0 20px 0 #333; 
+}
+.banner {
+position: relative;
+height: 210px;
+background-image: url("D:\Mini Project\projectcode");      background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.banner::after {
+content: "";
+background-color: rgba(0, 0, 0, 0.4); 
+position: absolute;
+width: 100%;
+height: 100%;
+}
+input, textarea, select {
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+input {
+width: calc(100% - 10px);
+padding: 5px;
+}
+select {
+width: 100%;
+padding: 7px 0;
+background: transparent;
+}
+textarea {
+width: calc(100% - 12px);
+padding: 5px;
+}
+.item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+color: #333;
+}
+.item input:hover, .item select:hover, .item textarea:hover {
+border: 1px solid transparent;
+box-shadow: 0 0 6px 0 #333;
+color: #333;
+}
+.item {
+position: relative;
+margin: 10px 0;
+}
+input[type="date"]::-webkit-inner-spin-button {
+display: none;
+}
+.item i, input[type="date"]::-webkit-calendar-picker-indicator {
+position: absolute;
+font-size: 20px;
+color: #a9a9a9;
+}
+.item i {
+right: 1%;
+top: 30px;
+z-index: 1;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+right: 0;
+z-index: 2;
+opacity: 0;
+cursor: pointer;
+}
+input[type="time"]::-webkit-inner-spin-button {
+margin: 2px 22px 0 0;
+}
+input[type=radio], input.other {
+display: none;
+}
+
+.question span {
+margin-left: 30px;
+}
+
+.btn-block {
+margin-top: 10px;
+text-align: center;
+}
+button {
+width: 150px;
+padding: 10px;
+border: none;
+border-radius: 5px; 
+background: #444;
+font-size: 16px;
+color: #fff;
+cursor: pointer;
+}
+button:hover {
+background: #666;
+}
+@media (min-width: 568px) {
+.name-item, .city-item {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.name-item input, .city-item input {
+width: calc(50% - 20px);
+}
+.city-item select {
+width: calc(50% - 8px);
+}
+
+    a {
+        text-decoration: none;
+      }
+      
+      nav {
+        font-family: monospace;
+      }
+      
+      ul {
+        background: darkorange;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+      }
+      
+      li {
+        color: #fff;
+        background: darkorange;
+        display: block;
+        float: center;
+        padding: 1rem;
+        position: relative;
+        text-decoration: none;
+        transition-duration: 0.5s;
+      }
+        
+      li a {
+        color: #fff;
+      }
+      
+      li:hover,
+      li:focus-within {
+        background: red;
+        cursor: pointer;
+      }
+      
+      li:focus-within a {
+        outline: none;
+      }
+      
+      ul li ul {
+        background: orange;
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        position: absolute;
+        transition: all 0.5s ease;
+        margin-top: 1rem;
+        left: 0;
+        display: none;
+      }
+      
+      ul li:hover > ul,
+      ul li:focus-within > ul,
+      ul li ul:hover,
+      ul li ul:focus {
+         visibility: visible;
+         opacity: 1;
+         display: block;
+      }
+      
+      ul li ul li {
+        clear: both;
+        width: 100%;
+      }
+}
+
+#option {
+  border: 1px;
+  background-color:darkorange;
+  width: 100%;
+}

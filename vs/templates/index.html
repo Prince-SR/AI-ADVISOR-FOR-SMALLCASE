@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Small Case Advisor</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/index.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+ 
+    <div class="testbox">
+      <form data-ajax="false" method="post" >
+        <div class="banner">
+          <h1>Small Case Advisor</h1>
+        </div>
+        <span>
+        <div class="item">
+          <li>Investment Type
+            <ul class="dropdown" aria-label="submenu">
+              <li><button id="option" value="stocks" formaction="/stocks">Stocks</button></li>
+              <li><button id="option" class = "smallcase" value="smallcase" formaction="Javascript:test();">Smallcase</button></li>
+            </ul>
+          </li>
+        </div>
+        </span>
+
+        <div class="item" id="invest">
+            
+        </div>
+        <div class="question" id="voltality">
+          
+        </div>
+
+      </form>
+
+   
+
+      <script>
+      function test(){
+          var btn = $(document.activeElement)[0].value;
+
+          console.log(btn);
+
+          if( btn == "smallcase") {
+            document.getElementById("invest").innerHTML = `
+              <p>Investment amount</p>
+              <input type="text" name="investamt"/>
+            `;
+
+            document.getElementById("voltality").innerHTML = `
+              <p>Volatality</p>
+              <div class="RISK">
+                  <div>
+                    <select name="options" id="risk">
+                      <option value="Low ">Low</option>
+                      <option value="Med. ">Medium</option>
+                      <option value="High ">High</option>
+                    </select>
+                  </div>
+              </div>
+                <div class="btn-block">
+                    <button type="submit" formaction="/smallcase"> Request Smallcases! </button>
+                </div>
+            `;
+
+          }
+          else {
+            document.getElementById("invest").innerHTML = "";
+            document.getElementById("voltality").innerHTML = ""; 
+          }
+
+      };
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "intents": [
+    {
+      "tag": "greetings",
+      "patterns": [
+        "hello",
+        "hey",
+        "hi",
+        "good day",
+        "greetings",
+        "what's up? Rahman"
+      ],
+      "responses": [
+        "Hello!",
+        "hey!",
+        "what can i do for You?"
+      ],
+      "contents_set": ""
+    },
+    {
+      "tag": "plot_chart",
+      "patterns": [
+        "Please plot a chart!",
+        "Plot a chart",
+        "I am Leaving",
+        "bye"
+      ],
+      "responses": [
+        "Plotting a chart!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "bye",
+      "patterns": [
+        "see you later",
+        "good bye!",
+        "I am Leaving",
+        "bye"
+      ],
+      "responses": [
+        "sad to see you go:(",
+        "bye",
+        "take care Good Bye!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "add_portfolio",
+      "patterns": [
+        "Add a stock to My Portfolio",
+        "Add a stock"
+      ],
+      "responses": [
+        "Yes Your Eligible",
+        "you'r 23",
+        "at age 18 you can start investing"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "remove_portfolio",
+      "patterns": [
+        "Remove a stocks",
+        "Remove a stocks from my portfolio"          
+      ],
+      "responses": [
+        "Removing Stocks!!"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "portfolio_worth",
+      "patterns": [
+        "what's my earnings?",
+        "How much do i earn",
+        "how much i make in a month?"
+      ],
+      "responses": [
+        "portfolio_worth"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "show_portfolio",
+      "patterns": [
+        "show my portfolio",
+        "how much i save"
+      ],
+      "responses": [
+        "Showing Portfolio"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "portfolio_gains",
+      "patterns": [
+        "How is my portfolio performing?",
+        "How are my gains?",
+        "Am i in profit?",
+        "which is the stocks that have low volatility?"
+      ],
+      "responses": [
+        "portfolio Gains"
+      ],
+      "context_set": ""
+    }
+  ]
+}
